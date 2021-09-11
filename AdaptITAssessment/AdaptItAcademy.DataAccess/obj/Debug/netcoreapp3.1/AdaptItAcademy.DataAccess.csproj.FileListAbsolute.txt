@@ -1,0 +1,13 @@
+C:\Projects\Personal\AdaptIT\AdaptITAssessment\AdaptItAcademy.DataAccess\obj\Debug\netcoreapp3.1\AdaptItAcademy.DataAccess.csproj.AssemblyReference.cache
+C:\Projects\Personal\AdaptIT\AdaptITAssessment\AdaptItAcademy.DataAccess\obj\Debug\netcoreapp3.1\AdaptItAcademy.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projects\Personal\AdaptIT\AdaptITAssessment\AdaptItAcademy.DataAccess\obj\Debug\netcoreapp3.1\AdaptItAcademy.DataAccess.AssemblyInfoInputs.cache
+C:\Projects\Personal\AdaptIT\AdaptITAssessment\AdaptItAcademy.DataAccess\obj\Debug\netcoreapp3.1\AdaptItAcademy.DataAccess.AssemblyInfo.cs
+C:\Projects\Personal\AdaptIT\AdaptITAssessment\AdaptItAcademy.DataAccess\obj\Debug\netcoreapp3.1\AdaptItAcademy.DataAccess.csproj.CoreCompileInputs.cache
+C:\Projects\Personal\AdaptIT\AdaptITAssessment\AdaptItAcademy.DataAccess\bin\Debug\netcoreapp3.1\AdaptItAcademy.DataAccess.deps.json
+C:\Projects\Personal\AdaptIT\AdaptITAssessment\AdaptItAcademy.DataAccess\bin\Debug\netcoreapp3.1\AdaptItAcademy.DataAccess.runtimeconfig.json
+C:\Projects\Personal\AdaptIT\AdaptITAssessment\AdaptItAcademy.DataAccess\bin\Debug\netcoreapp3.1\AdaptItAcademy.DataAccess.runtimeconfig.dev.json
+C:\Projects\Personal\AdaptIT\AdaptITAssessment\AdaptItAcademy.DataAccess\bin\Debug\netcoreapp3.1\AdaptItAcademy.DataAccess.dll
+C:\Projects\Personal\AdaptIT\AdaptITAssessment\AdaptItAcademy.DataAccess\bin\Debug\netcoreapp3.1\AdaptItAcademy.DataAccess.pdb
+C:\Projects\Personal\AdaptIT\AdaptITAssessment\AdaptItAcademy.DataAccess\obj\Debug\netcoreapp3.1\AdaptItAcademy.DataAccess.dll
+C:\Projects\Personal\AdaptIT\AdaptITAssessment\AdaptItAcademy.DataAccess\obj\Debug\netcoreapp3.1\AdaptItAcademy.DataAccess.pdb
+C:\Projects\Personal\AdaptIT\AdaptITAssessment\AdaptItAcademy.DataAccess\obj\Debug\netcoreapp3.1\AdaptItAcademy.DataAccess.genruntimeconfig.cache

@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "AdaptItAcademy.BusinessLogic/1.0.0": {
+        "runtime": {
+          "AdaptItAcademy.BusinessLogic.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "AdaptItAcademy.BusinessLogic/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
