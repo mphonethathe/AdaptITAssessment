@@ -9,7 +9,7 @@ namespace AdaptItAcademy.DataAccess.Models
     {
         public Course()
         {
-            training = new HashSet<training>();
+            Training = new HashSet<Training>();
         }
 
         public int Id { get; set; }
@@ -17,6 +17,6 @@ namespace AdaptItAcademy.DataAccess.Models
         public string CourseName { get; set; }
         public string CourseDescription { get; set; }
 
-        public virtual ICollection<training> training { get; set; }
+        public virtual ICollection<Training> Training { get; set; }
     }
 }

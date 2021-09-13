@@ -62,3 +62,5 @@ C:\Projects\Personal\AdaptIT\AdaptITAssessment\AdaptItAcademy.WebApi\bin\Debug\n
 C:\Projects\Personal\AdaptIT\AdaptITAssessment\AdaptItAcademy.WebApi\bin\Debug\netcoreapp3.1\AdaptItAcademy.DataAccesss.dll
 C:\Projects\Personal\AdaptIT\AdaptITAssessment\AdaptItAcademy.WebApi\bin\Debug\netcoreapp3.1\AdaptItAcademy.DataAccesss.pdb
 C:\Projects\Personal\AdaptIT\AdaptITAssessment\AdaptItAcademy.WebApi\obj\Debug\netcoreapp3.1\AdaptItAcademy.WebApi.csproj.CopyComplete
+C:\Projects\Personal\AdaptIT\AdaptITAssessment\AdaptItAcademy.WebApi\bin\Debug\netcoreapp3.1\AdaptItAcademy.BusinessLogic.dll
+C:\Projects\Personal\AdaptIT\AdaptITAssessment\AdaptItAcademy.WebApi\bin\Debug\netcoreapp3.1\AdaptItAcademy.BusinessLogic.pdb

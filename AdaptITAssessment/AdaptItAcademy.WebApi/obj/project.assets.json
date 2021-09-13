@@ -1483,6 +1483,19 @@
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "AdaptItAcademy.BusinessLogic/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "AdaptItAcademy.DataAccesss": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/AdaptItAcademy.BusinessLogic.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AdaptItAcademy.BusinessLogic.dll": {}
+        }
+      },
       "AdaptItAcademy.DataAccesss/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
@@ -5708,6 +5721,11 @@
         "system.xml.xmlserializer.nuspec"
       ]
     },
+    "AdaptItAcademy.BusinessLogic/1.0.0": {
+      "type": "project",
+      "path": "../AdaptItAcademy.BusinessLogic/AdaptItAcademy.BusinessLogic.csproj",
+      "msbuildProject": "../AdaptItAcademy.BusinessLogic/AdaptItAcademy.BusinessLogic.csproj"
+    },
     "AdaptItAcademy.DataAccesss/1.0.0": {
       "type": "project",
       "path": "../AdaptItAcademy.DataAccess/AdaptItAcademy.DataAccesss.csproj",
@@ -5716,6 +5734,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "AdaptItAcademy.BusinessLogic >= 1.0.0",
       "AdaptItAcademy.DataAccesss >= 1.0.0"
     ]
   },
@@ -5751,6 +5770,9 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
+            "C:\\Projects\\Personal\\AdaptIT\\AdaptITAssessment\\AdaptItAcademy.BusinessLogic\\AdaptItAcademy.BusinessLogic.csproj": {
+              "projectPath": "C:\\Projects\\Personal\\AdaptIT\\AdaptITAssessment\\AdaptItAcademy.BusinessLogic\\AdaptItAcademy.BusinessLogic.csproj"
+            },
             "C:\\Projects\\Personal\\AdaptIT\\AdaptITAssessment\\AdaptItAcademy.DataAccess\\AdaptItAcademy.DataAccesss.csproj": {
               "projectPath": "C:\\Projects\\Personal\\AdaptIT\\AdaptITAssessment\\AdaptItAcademy.DataAccess\\AdaptItAcademy.DataAccesss.csproj"
             }

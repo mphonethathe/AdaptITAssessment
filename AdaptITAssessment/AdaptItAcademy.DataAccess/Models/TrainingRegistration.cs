@@ -13,6 +13,6 @@ namespace AdaptItAcademy.DataAccess.Models
         public int? DelegateId { get; set; }
 
         public virtual Delegates Delegate { get; set; }
-        public virtual training Training { get; set; }
+        public virtual Training Training { get; set; }
     }
 }

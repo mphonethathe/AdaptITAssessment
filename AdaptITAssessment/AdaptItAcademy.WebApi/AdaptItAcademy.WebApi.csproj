@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\AdaptItAcademy.BusinessLogic\AdaptItAcademy.BusinessLogic.csproj" />
     <ProjectReference Include="..\AdaptItAcademy.DataAccess\AdaptItAcademy.DataAccesss.csproj" />
   </ItemGroup>
 

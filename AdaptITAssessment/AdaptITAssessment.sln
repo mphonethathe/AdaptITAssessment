@@ -3,11 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31624.102
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdaptItAcademy.WebApi", "AdaptItAcademy.WebApi\AdaptItAcademy.WebApi.csproj", "{C4A02A2A-7FAD-4004-B2CA-7F56999581F9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdaptItAcademy.WebApi", "AdaptItAcademy.WebApi\AdaptItAcademy.WebApi.csproj", "{C4A02A2A-7FAD-4004-B2CA-7F56999581F9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdaptItAcademy.BusinessLogic", "AdaptItAcademy.BusinessLogic\AdaptItAcademy.BusinessLogic.csproj", "{F489029C-898E-4F21-8F78-1884DBEBE384}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdaptItAcademy.BusinessLogic", "AdaptItAcademy.BusinessLogic\AdaptItAcademy.BusinessLogic.csproj", "{F489029C-898E-4F21-8F78-1884DBEBE384}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdaptItAcademy.DataAccesss", "AdaptItAcademy.DataAccess\AdaptItAcademy.DataAccesss.csproj", "{200FB127-1528-47AE-8F0F-6F9505D765F5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdaptItAcademy.DataAccesss", "AdaptItAcademy.DataAccess\AdaptItAcademy.DataAccesss.csproj", "{200FB127-1528-47AE-8F0F-6F9505D765F5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdaptItAcademy.BusinessLogicTests", "AdaptItAcademy.BusinessLogicTests\AdaptItAcademy.BusinessLogicTests.csproj", "{3A4244E5-5C1F-44BC-B761-7451019E1E9B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdaptItAcademy.Web", "AdaptItAcademy.Web\AdaptItAcademy.Web.csproj", "{B4241914-E335-4DA1-89D5-CD2200C006F3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +31,14 @@ Global
 		{200FB127-1528-47AE-8F0F-6F9505D765F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{200FB127-1528-47AE-8F0F-6F9505D765F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{200FB127-1528-47AE-8F0F-6F9505D765F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A4244E5-5C1F-44BC-B761-7451019E1E9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A4244E5-5C1F-44BC-B761-7451019E1E9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A4244E5-5C1F-44BC-B761-7451019E1E9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A4244E5-5C1F-44BC-B761-7451019E1E9B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4241914-E335-4DA1-89D5-CD2200C006F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4241914-E335-4DA1-89D5-CD2200C006F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4241914-E335-4DA1-89D5-CD2200C006F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4241914-E335-4DA1-89D5-CD2200C006F3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

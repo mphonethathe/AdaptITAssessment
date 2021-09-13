@@ -6,7 +6,7 @@ using System.Text;
 
 namespace AdaptItAcademy.DataAccess.Services.trainings
 {
-   public interface ITrainingRepository : IGenericRepository<training>
+   public interface ITrainingRepository : IGenericRepository<Training>
     {
 
     }

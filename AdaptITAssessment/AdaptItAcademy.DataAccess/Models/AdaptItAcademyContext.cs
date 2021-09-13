@@ -20,14 +20,14 @@ namespace AdaptItAcademy.DataAccess.Models
         public virtual DbSet<Course> Courses { get; set; }
         public virtual DbSet<Delegates> Delegates { get; set; }
         public virtual DbSet<TrainingRegistration> TrainingRegistrations { get; set; }
-        public virtual DbSet<training> training { get; set; }
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            if (!optionsBuilder.IsConfigured)
-            {
-                optionsBuilder.UseSqlServer("Server=DESKTOP-G0OLEIO;Database=AdaptItAcademy;Trusted_Connection=True;");
-            }
-        }
+        public virtual DbSet<Training> Training { get; set; }
+        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        //{
+        //    if (!optionsBuilder.IsConfigured)
+        //    {
+        //        optionsBuilder.UseSqlServer("Server=DESKTOP-G0OLEIO;Database=AdaptItAcademy;Trusted_Connection=True;");
+        //    }
+        //}
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.HasAnnotation("Relational:Collation", "SQL_Latin1_General_CP1_CI_AS");
@@ -102,18 +102,9 @@ namespace AdaptItAcademy.DataAccess.Models
 
                 entity.Property(e => e.TrainingId).HasColumnName("TrainingID");
 
-                entity.HasOne(d => d.Delegate)
-                    .WithMany(p => p.TrainingRegistrations)
-                    .HasForeignKey(d => d.DelegateId)
-                    .HasConstraintName("FK__TrainingR__Deleg__2C3393D0");
-
-                entity.HasOne(d => d.Training)
-                    .WithMany(p => p.TrainingRegistrations)
-                    .HasForeignKey(d => d.TrainingId)
-                    .HasConstraintName("FK__TrainingR__Train__2B3F6F97");
             });
 
-            modelBuilder.Entity<training>(entity =>
+            modelBuilder.Entity<Training>(entity =>
             {
                 entity.ToTable("Training");
 
@@ -130,7 +121,7 @@ namespace AdaptItAcademy.DataAccess.Models
                     .IsUnicode(false);
 
                 entity.HasOne(d => d.Course)
-                    .WithMany(p => p.training)
+                    .WithMany(p => p.Training)
                     .HasForeignKey(d => d.CourseId)
                     .HasConstraintName("FK__Training__Course__286302EC");
             });

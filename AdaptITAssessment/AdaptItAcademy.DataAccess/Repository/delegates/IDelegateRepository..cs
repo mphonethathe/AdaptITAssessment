@@ -8,5 +8,6 @@ namespace AdaptItAcademy.DataAccess.Services.delegates
 {
     public  interface IDelegateRepository : IGenericRepository<Delegates>
     {
+        bool EmailExist(string Email);
     }
 }

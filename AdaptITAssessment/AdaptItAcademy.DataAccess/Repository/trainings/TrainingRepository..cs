@@ -6,7 +6,7 @@ using System.Text;
 
 namespace AdaptItAcademy.DataAccess.Services.trainings
 {
-    public class TrainingRepository : GenericRepository<training>, ITrainingRepository
+    public class TrainingRepository : GenericRepository<Training>, ITrainingRepository
     {
         private readonly AdaptItAcademyContext appDbContext;
 

@@ -1,0 +1,67 @@
+﻿@inherits LayoutComponentBase
+
+
+<style>
+
+    .anyClass {
+        height: 87vh;
+        overflow-y: scroll;
+    }
+
+    /* width */
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+        background: inherit;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: #1766b8;
+    }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background: #1766b8;
+        }
+</style>
+<div id="wrapper">
+
+    <NavMenu></NavMenu>
+
+    <div id="content-wrapper" class="d-flex flex-column">
+        <div id="content">
+            <TopNav></TopNav>
+            <div class="container-fluid anyClass">
+                @Body
+                
+            </div>        
+        </div>
+       
+    </div>
+</div>
+
+
+
+<!-- Logout Modal-->
+<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">Are you sure you want to Logout?</div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                <a class="btn btn-primary" href="/logout">Logout</a>
+            </div>
+        </div>
+    </div>
+</div>
+

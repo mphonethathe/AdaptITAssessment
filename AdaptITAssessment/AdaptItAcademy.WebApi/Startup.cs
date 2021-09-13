@@ -1,7 +1,15 @@
+using AdaptItAcademy.BusinessLogic.DataLogic;
+using AdaptItAcademy.BusinessLogic.Utilities;
+using AdaptItAcademy.DataAccess.Models;
+using AdaptItAcademy.DataAccess.Services.courses;
+using AdaptItAcademy.DataAccess.Services.delegates;
+using AdaptItAcademy.DataAccess.Services.GenericRepository;
+using AdaptItAcademy.DataAccess.Services.trainings;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -25,7 +33,16 @@ namespace AdaptItAcademy.WebApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<AdaptItAcademyContext>(options =>
+            options.UseSqlServer(Configuration.GetConnectionString("DBConnection")));
+            services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+            services.AddScoped<ICourseRepository, CourseRepository>();
+            services.AddScoped<IDelegateRepository, DelegateRepository>();
+            services.AddScoped<ITrainingRepository, TrainingRepository>();
+            services.AddScoped<IDelegateLogic, DelegateLogic>();
+            services.AddScoped<ICourseLogic, CourseLogic>();
             services.AddControllers();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

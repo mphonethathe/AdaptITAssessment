@@ -5,9 +5,9 @@ using System.Collections.Generic;
 
 namespace AdaptItAcademy.DataAccess.Models
 {
-    public partial class training
+    public partial class Training
     {
-        public training()
+        public Training()
         {
             TrainingRegistrations = new HashSet<TrainingRegistration>();
         }
