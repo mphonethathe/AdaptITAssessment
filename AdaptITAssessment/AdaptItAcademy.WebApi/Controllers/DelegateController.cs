@@ -112,7 +112,6 @@ namespace AdaptItAcademy.WebApi.Controllers
                     return NotFound($"Delegate with Id = {id} not found.");
                 }
 
-
                 await _delegatesLogic.DeleteDelegate(id);
 
                 return StatusCode(StatusCodes.Status200OK);
