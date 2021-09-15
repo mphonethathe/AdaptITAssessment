@@ -15,8 +15,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdaptItAcademy.Web", "Adapt
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataBaseScriptAndDiagram", "DataBaseScriptAndDiagram", "{EA0E711F-DA3C-489E-9190-E1924044B09E}"
 	ProjectSection(SolutionItems) = preProject
+		..\..\..\..\Users\MphoNethathe\Documents\SQL Server Management Studio\CreateDatabseScript.sql = ..\..\..\..\Users\MphoNethathe\Documents\SQL Server Management Studio\CreateDatabseScript.sql
 		..\..\..\..\Users\MphoNethathe\Pictures\DataBaseDiagram.PNG = ..\..\..\..\Users\MphoNethathe\Pictures\DataBaseDiagram.PNG
-		..\..\..\..\Users\MphoNethathe\Documents\SQL Server Management Studio\SQLQuery9.sql = ..\..\..\..\Users\MphoNethathe\Documents\SQL Server Management Studio\SQLQuery9.sql
 	EndProjectSection
 EndProject
 Global
