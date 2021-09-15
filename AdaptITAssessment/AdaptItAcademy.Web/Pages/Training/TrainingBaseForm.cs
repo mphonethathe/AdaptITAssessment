@@ -91,7 +91,7 @@ namespace AdaptItAcademy.Web.Pages.Training
                         }
                         else if (create == "InValidClosingDate")
                         {
-                            toastService.ShowWarning("Closing date can not be less than training date ", "Warning");
+                            toastService.ShowWarning("Closing date can not be greater or same as training date and less than or same as  today's date ", "Warning");
                         }
                         else
                         {
@@ -122,7 +122,7 @@ namespace AdaptItAcademy.Web.Pages.Training
                         }
                         else if (create == "InValidClosingDate")
                         {
-                            toastService.ShowWarning("Closing date can not be less than training date ", "Warning");
+                            toastService.ShowWarning("Closing date can not be greater or same as training date and less than or same as  today's date ", "Warning");
                         }
                         else
                         {

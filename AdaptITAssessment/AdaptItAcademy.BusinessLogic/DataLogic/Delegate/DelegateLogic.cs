@@ -53,19 +53,15 @@ namespace AdaptItAcademy.BusinessLogic.DataLogic
         }
          public async Task DeleteDelegate(int id)
         {
-            //check if delegate already register a course
-
-            var registered = _registrationRepository.GetDelegateTraining(id);
-
-            if (registered == null)
+            try
             {
                 await _delegateRepository.Delete(id);
-            }
-            else
+            }catch(Exception ex)
             {
                 throw new Exception("registered");
             }
         }
+
 
         public async Task<Delegates> UpdateDelegate(Delegates delegates)
         {

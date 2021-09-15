@@ -122,7 +122,6 @@ namespace AdaptItAcademy.WebApi.Controllers
     
                 if (ex.Message == "registered")
                 {
-
                     return StatusCode(StatusCodes.Status409Conflict, "This delegate can not be deleted because is already registred for a training");
                 }
 

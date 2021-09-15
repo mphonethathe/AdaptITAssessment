@@ -79,3 +79,4 @@ C:\Projects\Personal\AdaptIT\AdaptITAssessment\AdaptItAcademy.Web\obj\Debug\netc
 C:\Projects\Personal\AdaptIT\AdaptITAssessment\AdaptItAcademy.Web\obj\Debug\netcoreapp3.1\AdaptItAcademy.Web.genruntimeconfig.cache
 C:\Projects\Personal\AdaptIT\AdaptITAssessment\AdaptItAcademy.Web\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\DelegateTraining\DelegateOwnTraining.razor.g.cs
 C:\Projects\Personal\AdaptIT\AdaptITAssessment\AdaptItAcademy.Web\obj\Debug\netcoreapp3.1\Razor\Pages\DelegateTraining\DelegateOwnTraining.razor.g.cs
+C:\Projects\Personal\AdaptIT\AdaptITAssessment\AdaptItAcademy.Web\obj\Debug\netcoreapp3.1\AdaptItAcademy.Web.csproj.AssemblyReference.cache

@@ -76,7 +76,7 @@ namespace AdaptItAcademy.BusinessLogic.DataLogic
 
         public bool ValidClosingDate(Training training)
         {
-            if (training.RegistrationClosingDate > training.TrainingDate)
+            if (training.RegistrationClosingDate >= DateTime.Now & training.RegistrationClosingDate < training.TrainingDate)
             {
                 return true;
             }
