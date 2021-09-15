@@ -7,52 +7,64 @@ using System.Text;
 namespace AdaptItAcademy.BusinessLogic.DataLogic.Tests
 {
     [TestClass()]
-    public class DelegateLogicTests
+    public class TrainingLogicTests
     {
         [TestMethod()]
-        public void DelegateLogicTest()
+        public void TrainingLogicTest()
         {
             Assert.Fail();
         }
 
         [TestMethod()]
-        public void CreateDelegateTest()
+        public void CreateTrainingTest()
         {
             Assert.Fail();
         }
 
         [TestMethod()]
-        public void DelegateLogicTest1()
+        public void CheckTrainingDateTest()
         {
             Assert.Fail();
         }
 
         [TestMethod()]
-        public void CreateDelegateTest1()
+        public void ValidDateTest()
         {
             Assert.Fail();
         }
 
         [TestMethod()]
-        public void GetDelegateTest()
+        public void ValidClosingDateTest()
         {
             Assert.Fail();
         }
 
         [TestMethod()]
-        public void DeleteDelegateTest()
+        public void DeleteTrainingTest()
         {
             Assert.Fail();
         }
 
         [TestMethod()]
-        public void UpdateDelegateTest()
+        public void GetAllTrainingTest()
         {
             Assert.Fail();
         }
 
         [TestMethod()]
-        public void GetAllDelegateTest()
+        public void GetCourseUpComingTrainingTest()
+        {
+            Assert.Fail();
+        }
+
+        [TestMethod()]
+        public void GetTrainingTest()
+        {
+            Assert.Fail();
+        }
+
+        [TestMethod()]
+        public void UpdateTrainingTest()
         {
             Assert.Fail();
         }
