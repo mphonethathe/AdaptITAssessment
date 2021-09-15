@@ -16,6 +16,7 @@ namespace AdaptItAcademy.WebApi.Controllers
     {
 
         private readonly IDelegateLogic _delegatesLogic;
+
         public DelegateController(IDelegateLogic delegatesLogic)
         {
             _delegatesLogic = delegatesLogic;
@@ -31,21 +32,27 @@ namespace AdaptItAcademy.WebApi.Controllers
                 }
 
                 var CreateDelegate = await _delegatesLogic.CreateDelegate(delegates);
-
-                if ((Convert.ToInt32(CreateDelegate) > 0))
-                {
-                    return CreatedAtAction(nameof(GetDelegate), new { id = CreateDelegate }, CreateDelegate);
-                }
-                else
-                {
-                    return StatusCode(StatusCodes.Status409Conflict, "");
-                }
+      
+                 return CreatedAtAction(nameof(GetDelegate), new { id = CreateDelegate.Id }, CreateDelegate);
 
             }
             catch(Exception ex)
             {
+                if(ex.Message == "EmailExist")
+                {
+                    return StatusCode(StatusCodes.Status409Conflict, "EmailExist");
+                }
+                else if (ex.Message == "InvalidNumber")
+                {
+                    return StatusCode(StatusCodes.Status400BadRequest, "InvalidPhone");
+                }
+                else if (ex.Message == "InvalidEmail")
+                {
+                    return StatusCode(StatusCodes.Status400BadRequest, "InvalidEmail");
+                }
+
                 return StatusCode(StatusCodes.Status500InternalServerError,
-                  $"Error saving data: {ex.Message}");
+                  $"Error saving data");
             }
         }
 
@@ -90,6 +97,37 @@ namespace AdaptItAcademy.WebApi.Controllers
 
                 return StatusCode(StatusCodes.Status500InternalServerError,
                    "Error retrieving data from the database");
+            }
+        }
+
+        [HttpDelete("{id:int}")]
+        public async Task<ActionResult<Course>> Delete(int id)
+        {
+            try
+            {
+                var delegateToDelete = await _delegatesLogic.GetDelegate(id);
+
+                if (delegateToDelete == null)
+                {
+                    return NotFound($"Delegate with Id = {id} not found.");
+                }
+
+
+                await _delegatesLogic.DeleteDelegate(id);
+
+                return StatusCode(StatusCodes.Status200OK);
+            }
+            catch (Exception ex )
+            {
+    
+                if (ex.Message == "registered")
+                {
+
+                    return StatusCode(StatusCodes.Status409Conflict, "This delegate can not be deleted because is already registred for a training");
+                }
+
+                return StatusCode(StatusCodes.Status500InternalServerError,
+                   "Error deleting data from the database");
             }
         }
 

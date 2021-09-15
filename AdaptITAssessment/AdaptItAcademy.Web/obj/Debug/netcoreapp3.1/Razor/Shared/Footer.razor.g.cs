@@ -86,6 +86,41 @@ using AdaptItAcademy.Web.Pages.Course;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 12 "C:\Projects\Personal\AdaptIT\AdaptITAssessment\AdaptItAcademy.Web\_Imports.razor"
+using AdaptItAcademy.Web.Pages.Delegate;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 13 "C:\Projects\Personal\AdaptIT\AdaptITAssessment\AdaptItAcademy.Web\_Imports.razor"
+using AdaptItAcademy.Web.Pages.Training;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 14 "C:\Projects\Personal\AdaptIT\AdaptITAssessment\AdaptItAcademy.Web\_Imports.razor"
+using AdaptItAcademy.Web.Pages.Registration;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 15 "C:\Projects\Personal\AdaptIT\AdaptITAssessment\AdaptItAcademy.Web\_Imports.razor"
+using Blazored.Toast;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 16 "C:\Projects\Personal\AdaptIT\AdaptITAssessment\AdaptItAcademy.Web\_Imports.razor"
+using Blazored.Toast.Services;
+
+#line default
+#line hidden
+#nullable disable
     public partial class Footer : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998

@@ -21,13 +21,8 @@ namespace AdaptItAcademy.DataAccess.Models
         public virtual DbSet<Delegates> Delegates { get; set; }
         public virtual DbSet<TrainingRegistration> TrainingRegistrations { get; set; }
         public virtual DbSet<Training> Training { get; set; }
-        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        //{
-        //    if (!optionsBuilder.IsConfigured)
-        //    {
-        //        optionsBuilder.UseSqlServer("Server=DESKTOP-G0OLEIO;Database=AdaptItAcademy;Trusted_Connection=True;");
-        //    }
-        //}
+        public virtual DbSet<TrainingCourseTotalAmount> TrainingCourseTotalAmount { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.HasAnnotation("Relational:Collation", "SQL_Latin1_General_CP1_CI_AS");
@@ -97,10 +92,18 @@ namespace AdaptItAcademy.DataAccess.Models
                 entity.Property(e => e.Id).HasColumnName("ID");
 
                 entity.Property(e => e.DelegateId).HasColumnName("DelegateID");
+ 
+                entity.Property(e => e.TrainingId).HasColumnName("TrainingID");
 
-                entity.Property(e => e.RegistrationClosingDate).HasColumnType("datetime");
+            });
+
+            modelBuilder.Entity<TrainingCourseTotalAmount>(entity =>
+            {
+                entity.ToTable("TrainingCourseTotalAmount");
 
                 entity.Property(e => e.TrainingId).HasColumnName("TrainingID");
+
+                entity.Property(e => e.TotalAmount).HasColumnType("decimal(18, 0)");
 
             });
 
@@ -112,9 +115,15 @@ namespace AdaptItAcademy.DataAccess.Models
 
                 entity.Property(e => e.CourseId).HasColumnName("CourseID");
 
+                entity.Property(e => e.RegistrationClosingDate).HasColumnType("datetime");
+
                 entity.Property(e => e.TrainingCost).HasColumnType("decimal(18, 0)");
 
+                entity.Property(e => e.TotalTrainingCostPaid).HasColumnType("decimal(18, 0)");
+
                 entity.Property(e => e.TrainingDate).HasColumnType("datetime");
+
+                entity.Property(e => e.PaymentRequired).HasColumnType("boolean");
 
                 entity.Property(e => e.TrainingVenue)
                     .HasMaxLength(255)

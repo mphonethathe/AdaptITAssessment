@@ -4,7 +4,9 @@ using AdaptItAcademy.DataAccess.Models;
 using AdaptItAcademy.DataAccess.Services.courses;
 using AdaptItAcademy.DataAccess.Services.delegates;
 using AdaptItAcademy.DataAccess.Services.GenericRepository;
+using AdaptItAcademy.DataAccess.Services.registration;
 using AdaptItAcademy.DataAccess.Services.trainings;
+using AdaptItAcademy.DataAccess.Services.traningCost;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -35,13 +37,19 @@ namespace AdaptItAcademy.WebApi
         {
             services.AddDbContext<AdaptItAcademyContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("DBConnection")));
+
             services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
             services.AddScoped<ICourseRepository, CourseRepository>();
             services.AddScoped<IDelegateRepository, DelegateRepository>();
             services.AddScoped<ITrainingRepository, TrainingRepository>();
+            services.AddScoped<IRegistrationRepository, RegistrationRepository>();
+            services.AddScoped<ITrainingCostRepository, TrainingCostRepository>();
             services.AddScoped<IDelegateLogic, DelegateLogic>();
             services.AddScoped<ICourseLogic, CourseLogic>();
-            services.AddControllers();
+            services.AddScoped<ITrainingLogic, TrainingLogic>();
+            services.AddScoped<ITrainingRegistrationLogic, TrainingRegistrationLogic>();
+            services.AddControllers().AddNewtonsoftJson(x =>
+            x.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore); 
 
         }
 

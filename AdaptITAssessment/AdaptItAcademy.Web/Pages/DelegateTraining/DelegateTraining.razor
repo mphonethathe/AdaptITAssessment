@@ -1,0 +1,64 @@
+﻿@inherits DelegateTrainingBaseForm
+@using System.ComponentModel.DataAnnotations
+@page "/delegateTraining"
+
+<div class="card-body">
+
+    @if (Searching == true)
+    {
+
+
+        <div class="spinner"></div>
+
+
+    }
+    else
+    {
+        <div>
+            <h3 style="text-align:center;margin:15px">List Of upcoming course trainings</h3>
+        </div>
+
+        <div class="card shadow mb-4">
+            <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">Course</h6>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table" id="example" width="100%" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th>Course Code</th>
+                                <th>Course Name</th>
+                                <th>Course Description</th>
+                                <th>Training Date</th>
+                                <th>Training Venue</th>
+                                <th>Number Of Seats</th>
+                                <th>Training Registration Closing Date</th>
+                                <th>Training Cost</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var training in trainings)
+                            {
+                                <tr>
+                                    <td>@training.Course.CourseCode</td>
+                                    <td>@training.Course.CourseName</td>
+                                    <td>@training.Course.CourseDescription</td>
+                                    <td>@training.TrainingDate</td>
+                                    <td>@training.TrainingVenue</td>
+                                    <td>@training.NumberOfSeats</td>
+                                    <td>@training.RegistrationClosingDate</td>
+                                    <td>R @training.TrainingCost</td>
+                                </tr>
+                            }
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    }
+
+</div>

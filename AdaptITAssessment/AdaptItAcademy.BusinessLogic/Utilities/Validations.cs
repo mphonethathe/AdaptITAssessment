@@ -18,7 +18,13 @@ namespace AdaptItAcademy.BusinessLogic.Utilities
         //validate phone number 
         public bool IsValidPhoneNumber(string phone)
         {
-            return true;
+
+            string strRegex = @"^\+27[0-9]{9}$";
+            Regex re = new Regex(strRegex);
+            if (re.IsMatch(phone))
+                return (true);
+            else
+                return (false);
         }
         // check if email does not exist on the database
         public bool EmailExist(string email)

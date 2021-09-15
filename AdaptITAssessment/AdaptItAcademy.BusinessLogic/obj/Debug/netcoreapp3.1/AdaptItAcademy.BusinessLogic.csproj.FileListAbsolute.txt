@@ -1,13 +1,13 @@
 C:\Projects\Personal\AdaptIT\AdaptITAssessment\AdaptItAcademy.BusinessLogic\bin\Debug\netcoreapp3.1\AdaptItAcademy.BusinessLogic.deps.json
 C:\Projects\Personal\AdaptIT\AdaptITAssessment\AdaptItAcademy.BusinessLogic\bin\Debug\netcoreapp3.1\AdaptItAcademy.BusinessLogic.dll
 C:\Projects\Personal\AdaptIT\AdaptITAssessment\AdaptItAcademy.BusinessLogic\bin\Debug\netcoreapp3.1\AdaptItAcademy.BusinessLogic.pdb
+C:\Projects\Personal\AdaptIT\AdaptITAssessment\AdaptItAcademy.BusinessLogic\bin\Debug\netcoreapp3.1\AdaptItAcademy.DataAccesss.dll
+C:\Projects\Personal\AdaptIT\AdaptITAssessment\AdaptItAcademy.BusinessLogic\bin\Debug\netcoreapp3.1\AdaptItAcademy.DataAccesss.pdb
 C:\Projects\Personal\AdaptIT\AdaptITAssessment\AdaptItAcademy.BusinessLogic\obj\Debug\netcoreapp3.1\AdaptItAcademy.BusinessLogic.csproj.AssemblyReference.cache
 C:\Projects\Personal\AdaptIT\AdaptITAssessment\AdaptItAcademy.BusinessLogic\obj\Debug\netcoreapp3.1\AdaptItAcademy.BusinessLogic.GeneratedMSBuildEditorConfig.editorconfig
 C:\Projects\Personal\AdaptIT\AdaptITAssessment\AdaptItAcademy.BusinessLogic\obj\Debug\netcoreapp3.1\AdaptItAcademy.BusinessLogic.AssemblyInfoInputs.cache
 C:\Projects\Personal\AdaptIT\AdaptITAssessment\AdaptItAcademy.BusinessLogic\obj\Debug\netcoreapp3.1\AdaptItAcademy.BusinessLogic.AssemblyInfo.cs
 C:\Projects\Personal\AdaptIT\AdaptITAssessment\AdaptItAcademy.BusinessLogic\obj\Debug\netcoreapp3.1\AdaptItAcademy.BusinessLogic.csproj.CoreCompileInputs.cache
+C:\Projects\Personal\AdaptIT\AdaptITAssessment\AdaptItAcademy.BusinessLogic\obj\Debug\netcoreapp3.1\AdaptItAcademy.BusinessLogic.csproj.CopyComplete
 C:\Projects\Personal\AdaptIT\AdaptITAssessment\AdaptItAcademy.BusinessLogic\obj\Debug\netcoreapp3.1\AdaptItAcademy.BusinessLogic.dll
 C:\Projects\Personal\AdaptIT\AdaptITAssessment\AdaptItAcademy.BusinessLogic\obj\Debug\netcoreapp3.1\AdaptItAcademy.BusinessLogic.pdb
-C:\Projects\Personal\AdaptIT\AdaptITAssessment\AdaptItAcademy.BusinessLogic\bin\Debug\netcoreapp3.1\AdaptItAcademy.DataAccesss.dll
-C:\Projects\Personal\AdaptIT\AdaptITAssessment\AdaptItAcademy.BusinessLogic\bin\Debug\netcoreapp3.1\AdaptItAcademy.DataAccesss.pdb
-C:\Projects\Personal\AdaptIT\AdaptITAssessment\AdaptItAcademy.BusinessLogic\obj\Debug\netcoreapp3.1\AdaptItAcademy.BusinessLogic.csproj.CopyComplete

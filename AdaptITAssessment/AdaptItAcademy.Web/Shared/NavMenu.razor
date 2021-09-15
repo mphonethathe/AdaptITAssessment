@@ -5,7 +5,7 @@
             <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
                 <a class="sidebar-brand d-flex align-items-center justify-content-center" style="background-color:#fff" href="">
-                 <div class="sidebar-brand-text "
+                    <div class="sidebar-brand-text "
                   <img style="height:50px" src="/images/adaptitlog.png" />
                 </div>
                 </a>
@@ -31,29 +31,60 @@
                 </div>
 
 
+                @*<li class="nav-item">
+            <a class="nav-link" href="Delegate">
+                <i class="fa fa-users"></i>
+                <span>Delegates</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="Training">
+                <i class="fa fa-wrench"></i>
+                <span>Training</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="Course">
+                <i class="fa fa-address-book"></i>
+                <span>Course</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="Registration">
+                <i class="fas fa-fw fa-cog"></i>
+                <span>Register Training</span>
+            </a>
+        </li>*@
+
                 <li class="nav-item">
-                    <a class="nav-link" href="employees">
-                        <i class="fa fa-users"></i>
-                        <span>Delegates</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="employees">
-                        <i class="fa fa-wrench"></i>
-                        <span>Training</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="Course">
-                        <i class="fa fa-address-book"></i>
-                        <span>Course</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="employees">
+                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseDelegate" aria-expanded="true" aria-controls="collapseDelegate">
                         <i class="fas fa-fw fa-cog"></i>
-                        <span>Register Training</span>
+                        <span>Delegate</span>
                     </a>
+                    <div id="collapseDelegate" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+                        <div class="bg-white py-2 collapse-inner rounded">
+                            <h6 class="collapse-header">Delegate Menu</h6>
+                            <a class="collapse-item" href="Delegate">Add Delegate</a>
+                            <a class="collapse-item" href="delegateTraining">View Course Training</a>
+                            <a class="collapse-item" href="Registration">Register Training</a>
+                            <a class="collapse-item" href="MyTraining">My  Registered Training</a>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUser" aria-expanded="true" aria-controls="collapseUser">
+                        <i class="fas fa-fw fa-cog"></i>
+                        <span>User</span>
+                    </a>
+                    <div id="collapseUser" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+                        <div class="bg-white py-2 collapse-inner rounded">
+                            <h6 class="collapse-header">User Menu</h6>
+                            <a class="collapse-item" href="Course">Add Course</a>
+                            <a class="collapse-item" href="Training">Add Training</a>
+
+                        </div>
+                    </div>
                 </li>
 
                 <!-- Divider -->

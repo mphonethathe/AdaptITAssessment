@@ -10,6 +10,6 @@ namespace AdaptItAcademy.DataAccess.Services.GenericRepository
         Task<TEntity> GetById(int Id);
         Task<TEntity> Add(TEntity entity);
         Task<TEntity> Update(TEntity entity);
-        Task<TEntity> Delete(int Id);
+        Task Delete(int Id);
     }
 }

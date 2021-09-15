@@ -1,0 +1,68 @@
+﻿@inherits DelegateOwnTrainingBaseForm
+@using System.ComponentModel.DataAnnotations
+@page "/MyTraining"
+
+<div class="card-body">
+
+
+        <div>
+            <h3 style="text-align:center;margin:15px">List of my upcoming course trainings</h3>
+        </div>
+
+
+        <div class="card shadow mb-4">
+            <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">Select Deligate</h6>
+                <div class="form-row">
+                    <select required @onchange="TrainingSerch" class="form-control">
+                        <option value="0">Please Select..</option>
+                        @if (delegates != null)
+                        {
+
+                            @foreach (var person in delegates)
+                            {
+
+                                <option value="@person.Id">@person.FirstName (@person.LastName) Email: (@person.Email)  </option>
+                            }
+                        }
+                    </select>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table" id="example" width="100%" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th>Course Code</th>
+                                <th>Course Name</th>
+                                <th>Course Description</th>
+                                <th>Training Date</th>
+                                <th>Training Venue</th>
+                                <th>Training Registration Closing Date</th>
+                                <th>Training Cost</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var training in trainings)
+                            {
+                                <tr>
+                                    <td>@training.Training.Course.CourseCode</td>
+                                    <td>@training.Training.Course.CourseName</td>
+                                    <td>@training.Training.Course.CourseDescription</td>
+                                    <td>@training.Training.TrainingDate</td>
+                                    <td>@training.Training.TrainingVenue</td>
+                                    <td>@training.Training.RegistrationClosingDate</td>
+                                    <td>R @training.Training.TrainingCost</td>
+                                </tr>
+                            }
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    
+
+</div>

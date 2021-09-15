@@ -105,6 +105,11 @@ namespace AdaptItAcademy.WebApi.Controllers
             catch (Exception ex)
             {
 
+                if (ex.Message == "CourseRegistered")
+                {
+                    return StatusCode(StatusCodes.Status409Conflict, "This course can not be deleted because is already registred for a training");
+                }
+
                 return StatusCode(StatusCodes.Status500InternalServerError,
                    "Error retrieving data from the database");
             }

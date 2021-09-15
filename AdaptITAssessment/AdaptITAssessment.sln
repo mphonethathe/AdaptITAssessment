@@ -9,9 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdaptItAcademy.BusinessLogi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdaptItAcademy.DataAccesss", "AdaptItAcademy.DataAccess\AdaptItAcademy.DataAccesss.csproj", "{200FB127-1528-47AE-8F0F-6F9505D765F5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdaptItAcademy.BusinessLogicTests", "AdaptItAcademy.BusinessLogicTests\AdaptItAcademy.BusinessLogicTests.csproj", "{3A4244E5-5C1F-44BC-B761-7451019E1E9B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdaptItAcademy.BusinessLogicTests", "AdaptItAcademy.BusinessLogicTests\AdaptItAcademy.BusinessLogicTests.csproj", "{3A4244E5-5C1F-44BC-B761-7451019E1E9B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdaptItAcademy.Web", "AdaptItAcademy.Web\AdaptItAcademy.Web.csproj", "{B4241914-E335-4DA1-89D5-CD2200C006F3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdaptItAcademy.Web", "AdaptItAcademy.Web\AdaptItAcademy.Web.csproj", "{B4241914-E335-4DA1-89D5-CD2200C006F3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -9,8 +9,9 @@ namespace AdaptItAcademy.Web.services.Course
     public interface ICourseService
     {
         Task<Courses> Create(Courses courses);
+        Task<Courses> Update(Courses courses);
         Task<List<Courses>> GetAll();
-        Task Delete(int id);
+        Task<string> Delete(int id);
         Task<Courses> GetByID(int id);
     }
 }

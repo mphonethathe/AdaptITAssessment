@@ -25,6 +25,13 @@ namespace AdaptItAcademy.Web.services.Course
 
         }
 
+        public async Task<Courses> Update(Courses courses)
+        {
+            var response = await httpClient.PutAsJsonAsync<Courses>($"api/Course", courses);
+            return await response.Content.ReadFromJsonAsync<Courses>();
+
+        }
+
         public async Task<Courses> Get(int Id)
         {
             return await httpClient.GetFromJsonAsync<Courses>($"api/Course/GetByUserId/{Id}");
@@ -40,15 +47,10 @@ namespace AdaptItAcademy.Web.services.Course
             return await httpClient.GetFromJsonAsync<Courses>($"api/Course/GetCourse/{id}");
         }
 
-        public async Task<Courses> Update(Courses course)
+        public async Task<string> Delete(int id)
         {
-            var response = httpClient.PutAsJsonAsync<Courses>($"api/Course", course);
-            return await response.Result.Content.ReadFromJsonAsync<Courses>();
-        }
-
-        public async Task Delete (int id)
-        {
-           await  httpClient.DeleteAsync($"api/Course/{id}");
+           var response = httpClient.DeleteAsync($"api/Course/{id}");
+            return await response.Result.Content.ReadAsStringAsync();
         }
 
     }

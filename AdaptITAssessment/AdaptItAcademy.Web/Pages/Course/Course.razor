@@ -1,6 +1,6 @@
 ﻿@inherits CourseBaseForm
 @page "/Course"
-
+@using Blazored.Toast.Configuration
 <div class="card-body">
 
     <h2 style="text-align:center">
@@ -45,7 +45,15 @@
         </div>
     </div>
 
-    @if (courses.Count > 0)
+    @if (Searching == true)
+    {
+
+
+        <div class="spinner"></div>
+
+
+    }
+    else
     {
         <div>
             <h2 style="text-align:center;margin:15px">List Of Courses</h2>
@@ -74,7 +82,7 @@
                                     <td>@course.CourseCode</td>
                                     <td>@course.CourseName</td>
                                     <td>@course.CourseDescription</td>
-                                    <td><a @onclick="@(() => Get(course.Id))"  role="button" aria-expanded="false" aria-controls="collapseExample"><i class="fas fa-edit"></i></a></td>
+                                    <td><a @onclick="@(() => Get(course.Id))" role="button" aria-expanded="false" aria-controls="collapseExample"><i class="fas fa-edit"></i></a></td>
                                     <td><a @onclick="@(() => Delete(course.Id))" role="button" aria-expanded="false" aria-controls="collapseExample"><i class="fas fa-trash"></i></a></td>
                                 </tr>
                             }
@@ -87,4 +95,13 @@
 
     }
 
-    </div>
+</div>
+
+<BlazoredToasts Position="ToastPosition.TopRight"
+                Timeout="5"
+                IconType="IconType.FontAwesome"
+                SuccessClass="success-toast-override"
+                SuccessIcon="fa fa-thumbs-up"
+                ErrorIcon="fa fa-bug">
+
+</BlazoredToasts>

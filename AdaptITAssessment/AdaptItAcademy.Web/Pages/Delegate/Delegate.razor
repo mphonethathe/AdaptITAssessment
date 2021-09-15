@@ -1,0 +1,162 @@
+﻿@inherits DelegateBaseForm
+@page "/Delegate"
+
+<div class="card-body">
+
+    <h2 style="text-align:center">
+        Add Delegate
+    </h2>
+
+    <div>
+        <div class="card card-body">
+            <EditForm EditContext="@editContext">
+                <DataAnnotationsValidator />
+                <div class="form-row">
+
+                    <div class="form-group col-xl-6 col-sm-12 col-md-6 col-lg-6">
+                        <label>First Name</label>
+                        <InputText @bind-Value="delegates.FirstName" class="form-control" />
+                        <ValidationMessage For="@(() => delegates.FirstName)" />
+                    </div>
+
+                    <div class="form-group col-xl-6 col-sm-12 col-md-6 col-lg-6">
+                        <label>Last Name</label>
+                        <InputText @bind-Value="delegates.LastName" class="form-control" />
+                        <ValidationMessage For="@(() =>delegates.LastName)" />
+
+                    </div>
+
+                </div>
+
+                <div class="form-row">
+
+                    <div class="form-group col-xl-6 col-sm-12 col-md-6 col-lg-6">
+                        <label>Email</label>
+                        <InputText @bind-Value="delegates.Email" class="form-control" />
+                        <ValidationMessage For="@(() => delegates.Email)" />
+                    </div>
+
+                    <div class="form-group col-xl-6 col-sm-12 col-md-6 col-lg-6">
+                        <label>Phone Number</label>
+                        <InputText @bind-Value="delegates.PhoneNumber" class="form-control" />
+                        <ValidationMessage For="@(() => delegates.PhoneNumber)" />
+
+                    </div>
+
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-xl-6 col-sm-12 col-md-6 col-lg-6">
+                        <label>Physical Address</label>
+                        <InputText @bind-Value="delegates.PhysicalAddress" class="form-control" />
+                        <ValidationMessage For="@(() => delegates.PhysicalAddress)" />
+                    </div>
+                    <div class="form-group col-xl-6 col-sm-12 col-md-6 col-lg-6">
+                        <label>Postal Address</label>
+                        <InputText @bind-Value="delegates.PostalAddress" class="form-control" />
+                        <ValidationMessage For="@(() => delegates.PostalAddress)" />
+
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-xl-6 col-sm-12 col-md-6 col-lg-6">
+                        <label>Company Name</label>
+                        <InputText @bind-Value="delegates.CompanyName" class="form-control" />
+                        <ValidationMessage For="@(() => delegates.CompanyName)" />
+                    </div>
+                    <div class="form-group col-xl-6 col-sm-12 col-md-6 col-lg-6">
+                        <label>Dietary Requirements</label>
+                        <InputSelect @bind-Value="delegates.DietaryRequirements" class="form-control">
+                            <option value=""></option>
+                            <option value="Gluten free and coeliac.">Gluten free and coeliac.</option>
+                            <option value="Dairy free and lactose free">Dairy free and lactose free</option>
+                            <option value="Vegetarian">Vegetarian</option>
+                            <option value="Vegan">Vegan</option>
+                            <option value="Paleo">Paleo</option>
+                            <option value="FODMAP">FODMAP</option>
+                            <option value="Fish and shellfish allergies.">Fish and shellfish allergies.</option>
+                            <option value="Tree nut and peanut allergies">Tree nut and peanut allergies</option>
+                        </InputSelect>
+                        <ValidationMessage For="@(() => delegates.DietaryRequirements)" />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <button @onclick="HandleValidSubmit" class="btn btn-outline-success mr-1">Save</button>
+                </div>
+            </EditForm>
+        </div>
+    </div>
+
+    @if (Searching == true)
+    {
+
+
+        <div class="spinner"></div>
+
+
+    }
+    else
+    {
+        <div>
+            <h2 style="text-align:center;margin:15px">List Of Delegate</h2>
+        </div>
+
+        <div class="card shadow mb-4">
+            <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">Delegates</h6>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table" id="example" width="100%" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Email</th>
+                                <th>Phone Number</th>
+                                <th>Dietart Requirements</th>
+                                <th>Company Name</th>
+                                <th>Physical Address</th>
+                                <th>Postal Address</th>
+                                <th>Delete</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var delegates in delegateList)
+                            {
+                            <tr>
+                                <td>@delegates.FirstName</td>
+                                <td>@delegates.LastName</td>
+                                <td>@delegates.Email</td>
+                                <td>@delegates.PhoneNumber</td>
+                                <td>@delegates.DietaryRequirements</td>
+                                <td>@delegates.CompanyName</td>
+                                <td>@delegates.PhysicalAddress</td>
+                                <td>@delegates.PostalAddress</td>
+                                <td><a @onclick="@(() => Delete(delegates.Id))" role="button" aria-expanded="false" aria-controls="collapseExample"><i class="fas fa-trash"></i></a></td>
+                            </tr>
+                            }
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    }
+
+
+    
+
+</div>
+
+<BlazoredToasts
+                Position="Blazored.Toast.Configuration.ToastPosition.TopRight"
+                Timeout="5"
+                IconType="IconType.FontAwesome"
+                SuccessClass="success-toast-override"
+                SuccessIcon="fa fa-thumbs-up"
+                ErrorIcon="fa fa-bug">
+
+</BlazoredToasts>

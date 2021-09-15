@@ -1,8 +1,11 @@
 ﻿using AdaptItAcademy.DataAccess.Models;
 using AdaptItAcademy.DataAccess.Services.GenericRepository;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace AdaptItAcademy.DataAccess.Services.trainings
 {
@@ -15,5 +18,12 @@ namespace AdaptItAcademy.DataAccess.Services.trainings
         {
             this.appDbContext = appDbContext;
         }
+
+       public IEnumerable<Training> GetUpComungCourse()
+        {
+            return appDbContext.Training.Include(t => t.Course);
+        }
+
+
     }
 }

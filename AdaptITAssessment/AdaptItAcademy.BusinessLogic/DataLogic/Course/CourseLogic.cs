@@ -1,5 +1,6 @@
 ﻿using AdaptItAcademy.DataAccess.Models;
 using AdaptItAcademy.DataAccess.Services.courses;
+using AdaptItAcademy.DataAccess.Services.trainings;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -11,22 +12,45 @@ namespace AdaptItAcademy.BusinessLogic.DataLogic
     {
 
         private readonly ICourseRepository _courseRepository;
+        private readonly ITrainingRepository _trainingRepository;
 
-        public CourseLogic(ICourseRepository courseRepository)
+        public CourseLogic(ICourseRepository courseRepository, ITrainingRepository trainingRepository)
         {
             _courseRepository = courseRepository;
+            _trainingRepository = trainingRepository;
         }
 
-        //check if all required field are true
         public async Task<Course> CreateCourse(Course course)
-        {
+        {                     
             return await _courseRepository.Add(course);
         }
 
         public async Task DeleteCourse(int id)
         {
-             await _courseRepository.Delete(id);
+            //check if there is training for this course
+
+            IEnumerable<Training> trainings = _trainingRepository.GetUpComungCourse();
+
+            bool CourseRegistered = false;
+
+            foreach(var training in trainings)
+            {
+               if(training.CourseId == id)
+                {
+                    CourseRegistered = true;
+                }
+            }
+
+            if (!CourseRegistered)
+            {
+                await _courseRepository.Delete(id);
+            }
+            else
+            {
+                throw new Exception("CourseRegistered");
+            }
         }
+
 
         public async Task<IEnumerable<Course>> GetAllCourses()
         {

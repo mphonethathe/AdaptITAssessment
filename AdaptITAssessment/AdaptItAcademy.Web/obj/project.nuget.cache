@@ -1,9 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "XsqhDtuvC0/30TVExCtfzJU+KhscgikdcoOE0k3F58RU0H+SHGytu4EyJ7GeUNlexMx+DKjnMmBZ5xk7DHMtKA==",
+  "dgSpecHash": "r3FTfAvpw5/bO7XKH6bPPcML4HjV9zXCka5C7TFu0FHgO/Stgefz8cL8u466Qrp4uc2teX57+EbOpcuUDvx2Rg==",
   "success": true,
   "projectFilePath": "C:\\Projects\\Personal\\AdaptIT\\AdaptITAssessment\\AdaptItAcademy.Web\\AdaptItAcademy.Web.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\MphoNethathe\\.nuget\\packages\\blazored.toast\\3.1.2\\blazored.toast.3.1.2.nupkg.sha512",
+    "C:\\Users\\MphoNethathe\\.nuget\\packages\\microsoft.aspnetcore.authorization\\3.1.4\\microsoft.aspnetcore.authorization.3.1.4.nupkg.sha512",
+    "C:\\Users\\MphoNethathe\\.nuget\\packages\\microsoft.aspnetcore.components\\3.1.4\\microsoft.aspnetcore.components.3.1.4.nupkg.sha512",
+    "C:\\Users\\MphoNethathe\\.nuget\\packages\\microsoft.aspnetcore.components.analyzers\\3.1.4\\microsoft.aspnetcore.components.analyzers.3.1.4.nupkg.sha512",
+    "C:\\Users\\MphoNethathe\\.nuget\\packages\\microsoft.aspnetcore.components.forms\\3.1.4\\microsoft.aspnetcore.components.forms.3.1.4.nupkg.sha512",
+    "C:\\Users\\MphoNethathe\\.nuget\\packages\\microsoft.aspnetcore.components.web\\3.1.4\\microsoft.aspnetcore.components.web.3.1.4.nupkg.sha512",
+    "C:\\Users\\MphoNethathe\\.nuget\\packages\\microsoft.aspnetcore.metadata\\3.1.4\\microsoft.aspnetcore.metadata.3.1.4.nupkg.sha512",
     "C:\\Users\\MphoNethathe\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\5.0.0\\microsoft.extensions.dependencyinjection.5.0.0.nupkg.sha512",
     "C:\\Users\\MphoNethathe\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\5.0.0\\microsoft.extensions.dependencyinjection.abstractions.5.0.0.nupkg.sha512",
     "C:\\Users\\MphoNethathe\\.nuget\\packages\\microsoft.extensions.http\\5.0.0\\microsoft.extensions.http.5.0.0.nupkg.sha512",
@@ -11,6 +18,7 @@
     "C:\\Users\\MphoNethathe\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\5.0.0\\microsoft.extensions.logging.abstractions.5.0.0.nupkg.sha512",
     "C:\\Users\\MphoNethathe\\.nuget\\packages\\microsoft.extensions.options\\5.0.0\\microsoft.extensions.options.5.0.0.nupkg.sha512",
     "C:\\Users\\MphoNethathe\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.0\\microsoft.extensions.primitives.5.0.0.nupkg.sha512",
+    "C:\\Users\\MphoNethathe\\.nuget\\packages\\microsoft.jsinterop\\3.1.4\\microsoft.jsinterop.3.1.4.nupkg.sha512",
     "C:\\Users\\MphoNethathe\\.nuget\\packages\\system.diagnostics.diagnosticsource\\5.0.0\\system.diagnostics.diagnosticsource.5.0.0.nupkg.sha512",
     "C:\\Users\\MphoNethathe\\.nuget\\packages\\system.net.http.json\\5.0.0\\system.net.http.json.5.0.0.nupkg.sha512",
     "C:\\Users\\MphoNethathe\\.nuget\\packages\\system.text.json\\5.0.0\\system.text.json.5.0.0.nupkg.sha512"

@@ -1,0 +1,86 @@
+﻿@inherits RegistrationBaseForm
+@page "/Registration"
+@using Blazored.Toast.Configuration
+
+<h3 style="text-align:center">
+    Register For Training
+</h3>
+<div class="card m-3">
+    @if (Searching == true)
+    {
+
+
+        <div class="spinner"></div>
+
+
+    }
+    else
+    {
+        <div class="form-row">
+            <div class="form-group col-xl-6 col-sm-12 col-md-6 col-lg-6">
+                <div class="card-header" style="background-color:white">
+                    <div class="mdl-card__supporting-text">
+                        Select Delegate
+                    </div>
+                    <EditForm EditContext="@editContext">
+                        <DataAnnotationsValidator />
+                        <div class="form-row">
+
+                            <select required @onchange="DelegateClick" class="form-control">
+                                <option value="0">Please Select... </option>
+                                @if (delegateList != null)
+                                {
+
+                                    @foreach (var person in delegateList)
+                                    {
+
+                                        <option value="@person.Id">@person.FirstName @person.LastName </option>
+                                    }
+                                }
+                            </select>
+                        </div>
+                    </EditForm>
+                </div>
+
+            </div>
+            <div class="form-group col-xl-6 col-sm-12 col-md-6 col-lg-6">
+                <div class="card-header" style="background-color:white">
+                    <div class="mdl-card__supporting-text">
+                        Select Training
+                    </div>
+                    <EditForm EditContext="@editContext">
+                        <DataAnnotationsValidator />
+                        <div class="form-row">
+                            <select required @onchange="TrainingClick" class="form-control">
+                                <option value="0">Please Select... </option>
+                                @if (trainings != null)
+                                {
+
+                                    @foreach (var training in trainings)
+                                    {
+
+                                        <option value="@training.Id">@training.Course.CourseCode (@training.Course.CourseName) Training Date: (@training.TrainingDate.ToShortDateString())  Venue: (@training.TrainingVenue) </option>
+                                    }
+                                }
+                            </select>
+                        </div>
+                    </EditForm>
+                </div>
+            </div>
+        </div>
+        <div class="card-footer" style="background-color:white">
+            <div style="text-align:center">
+                <button @onclick="HandleValidSubmit" class="btn btn-primary mr-1">Register</button>
+            </div>
+        </div>
+    }
+    </div>
+
+<BlazoredToasts Position="Blazored.Toast.Configuration.ToastPosition.TopRight"
+                Timeout="5"
+                IconType="IconType.FontAwesome"
+                SuccessClass="success-toast-override"
+                SuccessIcon="fa fa-thumbs-up"
+                ErrorIcon="fa fa-bug">
+
+</BlazoredToasts>

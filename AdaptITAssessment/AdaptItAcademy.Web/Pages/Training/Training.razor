@@ -1,0 +1,155 @@
+﻿@inherits TrainingBaseForm
+@using System.ComponentModel.DataAnnotations
+@page "/Training"
+@using Blazored.Toast.Configuration
+<div class="card-body">
+
+    <h3 style="text-align:center">
+        Add Training
+    </h3>
+
+    <div>
+        <div class="card card-body">
+            <EditForm EditContext="@editContext">
+                <DataAnnotationsValidator />
+                <div class="form-row">
+
+                    <div class="form-group col-xl-6 col-sm-12 col-md-6 col-lg-6">
+                        <label>Training Venue</label>
+                        <InputText @bind-Value="training.TrainingVenue" class="form-control" />
+                        <ValidationMessage For="@(() => training.TrainingVenue)" />
+                    </div>
+
+                    <div class="form-group col-xl-6 col-sm-12 col-md-6 col-lg-6">
+                        <label>Training Date</label>
+                        <InputDate @bind-Value="training.TrainingDate" class="form-control" />
+                        <ValidationMessage For="@(() =>training.TrainingDate)" />
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-xl-6 col-sm-12 col-md-6 col-lg-6">
+                        <label>Number Of Seats</label>
+                        <InputNumber @bind-Value="training.NumberOfSeats" class="form-control" />
+                        <ValidationMessage For="@(() => training.NumberOfSeats)" />
+                    </div>
+                    <div class="form-group col-xl-6 col-sm-12 col-md-6 col-lg-6">
+                        <label>Course Code</label>
+                        <select required @onchange="CourseClick" class="form-control">
+                            <option value="">Please Select</option>
+                            @if (courses != null)
+                            {
+
+                                @foreach (var cours in courses)
+                                {
+
+                                    <option value="@cours.Id">@cours.CourseCode</option>
+                                }
+                            }
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+
+                    <div class="form-check">
+                        <InputCheckbox @bind-Value="training.PaymentRequired" class="form-check-input" />
+                        <label class="form-check-label" for="exampleCheck1"> Payment Required</label>
+                    </div>
+
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-xl-6 col-sm-12 col-md-6 col-lg-6">
+                        <label>Training Registration Closing Date</label>
+                        <InputDate @bind-Value="training.RegistrationClosingDate" class="form-control" />
+                        <ValidationMessage For="@(() =>training.RegistrationClosingDate)" />
+                    </div>
+                    @if (training.PaymentRequired)
+                    {
+                        <div class="form-group col-xl-6 col-sm-12 col-md-6 col-lg-6">
+                            <label>Training Cost</label>
+                            <InputNumber @bind-Value="training.TrainingCost" class="form-control" />
+                            <ValidationMessage For="@(() => training.TrainingCost)" />
+                        </div>
+                    }
+                </div>
+
+                <div class="form-group">
+                    <button @onclick="HandleValidSubmit" class="btn btn-outline-success mr-1">Save</button>
+                </div>
+            </EditForm>
+        </div>
+    </div>
+
+    @if (Searching == true)
+    {
+
+
+        <div class="spinner"></div>
+
+
+    }
+    else
+    {
+        <div>
+            <h3 style="text-align:center;margin:15px">List Of upcoming course trainings</h3>
+        </div>
+
+        <div class="card shadow mb-4">
+            <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">Course</h6>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table" id="example" width="100%" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th>Course Code</th>
+                                <th>Course Name</th>
+                                <th>Course Description</th>
+                                <th>Training Date</th>
+                                <th>Training Venue</th>
+                                <th>Number Of Seats</th>
+                                <th>Training Registration Closing Date</th>
+                                <th>Training Cost</th>
+                                <th>Update</th>
+                                <th>Delete</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var training in trainings)
+                            {
+                                <tr>
+                                    <td>@training.Course.CourseCode</td>
+                                    <td>@training.Course.CourseName</td>
+                                    <td>@training.Course.CourseDescription</td>
+                                    <td>@training.TrainingDate</td>
+                                    <td>@training.TrainingVenue</td>
+                                    <td>@training.NumberOfSeats</td>
+                                    <td>@training.RegistrationClosingDate</td>
+                                    <td>R @training.TrainingCost</td>
+                                    <td><a @onclick="@(() => Get(training.Id))" role="button" aria-expanded="false" aria-controls="collapseExample"><i class="fas fa-edit"></i></a></td>
+                                    <td><a @onclick="@(() => Delete(training.Id))" role="button" aria-expanded="false" aria-controls="collapseExample"><i class="fas fa-trash"></i></a></td>
+                                </tr>
+                            }
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    }
+
+</div>
+
+
+<BlazoredToasts Position="ToastPosition.TopRight"
+                Timeout="5"
+                IconType="IconType.FontAwesome"
+                SuccessClass="success-toast-override"
+                SuccessIcon="fa fa-thumbs-up"
+                ErrorIcon="fa fa-bug">
+
+</BlazoredToasts>

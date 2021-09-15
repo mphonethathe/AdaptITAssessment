@@ -1,6 +1,8 @@
 ﻿using AdaptItAcademy.BusinessLogic.Utilities;
 using AdaptItAcademy.DataAccess.Models;
 using AdaptItAcademy.DataAccess.Services.delegates;
+using AdaptItAcademy.DataAccess.Services.registration;
+using AdaptItAcademy.DataAccess.Services.trainings;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -12,11 +14,14 @@ namespace AdaptItAcademy.BusinessLogic.DataLogic
     public class DelegateLogic : IDelegateLogic
     {
 
-        private readonly IDelegateRepository _delegateRepository;
 
-        public DelegateLogic(IDelegateRepository delegateRepository)
+
+        private readonly IDelegateRepository _delegateRepository;
+        private readonly IRegistrationRepository _registrationRepository;
+        public DelegateLogic(IDelegateRepository delegateRepository, IRegistrationRepository registrationRepository)
         {
             _delegateRepository = delegateRepository;
+            _registrationRepository = registrationRepository;
         }
 
         public async Task<Delegates> CreateDelegate(Delegates delegates)
@@ -25,16 +30,16 @@ namespace AdaptItAcademy.BusinessLogic.DataLogic
 
             if (validations.EmailExist(delegates.Email))
             {
-                throw new Exception("Email already exist");
+                throw new Exception("EmailExist");
 
             }
             else if (!validations.IsValidPhoneNumber(delegates.PhoneNumber))
             {
-                throw new Exception("Invalid Phone Number");
+                throw new Exception("InvalidNumber");
             }
             else if (!validations.IsValidEmail(delegates.Email))
             {
-                throw new Exception("Please provide Valid Email Address");
+                throw new Exception("InvalidEmail");
             }
             else
             {
@@ -48,7 +53,18 @@ namespace AdaptItAcademy.BusinessLogic.DataLogic
         }
          public async Task DeleteDelegate(int id)
         {
-            await _delegateRepository.Delete(id);
+            //check if delegate already register a course
+
+            var registered = _registrationRepository.GetDelegateTraining(id);
+
+            if (registered == null)
+            {
+                await _delegateRepository.Delete(id);
+            }
+            else
+            {
+                throw new Exception("registered");
+            }
         }
 
         public async Task<Delegates> UpdateDelegate(Delegates delegates)
@@ -58,7 +74,7 @@ namespace AdaptItAcademy.BusinessLogic.DataLogic
 
         public async Task<IEnumerable<Delegates>> GetAllDelegate()
         {
-           return await _delegateRepository.GetAll();
+            return await _delegateRepository.GetAll();
         }
     }
 

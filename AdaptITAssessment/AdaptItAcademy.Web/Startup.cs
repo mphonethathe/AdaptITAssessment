@@ -1,4 +1,7 @@
 using AdaptItAcademy.Web.services.Course;
+using AdaptItAcademy.Web.services.Delegate;
+using AdaptItAcademy.Web.services.Training;
+using Blazored.Toast;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Hosting;
@@ -30,6 +33,7 @@ namespace AdaptItAcademy.Web
             services.AddAuthentication("Identity.Application").AddCookie();
             services.AddRazorPages();
             services.AddServerSideBlazor();
+            services.AddBlazoredToast();
 
             services.AddHttpClient<ITrainingService, TrainingService>(client =>
             {
