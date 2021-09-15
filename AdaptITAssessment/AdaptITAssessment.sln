@@ -13,6 +13,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdaptItAcademy.BusinessLogi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdaptItAcademy.Web", "AdaptItAcademy.Web\AdaptItAcademy.Web.csproj", "{B4241914-E335-4DA1-89D5-CD2200C006F3}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataBaseScriptAndDiagram", "DataBaseScriptAndDiagram", "{EA0E711F-DA3C-489E-9190-E1924044B09E}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\..\Users\MphoNethathe\Pictures\DataBaseDiagram.PNG = ..\..\..\..\Users\MphoNethathe\Pictures\DataBaseDiagram.PNG
+		..\..\..\..\Users\MphoNethathe\Documents\SQL Server Management Studio\SQLQuery9.sql = ..\..\..\..\Users\MphoNethathe\Documents\SQL Server Management Studio\SQLQuery9.sql
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
